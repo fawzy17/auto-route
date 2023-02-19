@@ -1,4 +1,4 @@
-import 'package:autoroute/halaman1.dart';
+
 import 'package:autoroute/route/router.gr.dart';
 import 'package:flutter/material.dart';
 

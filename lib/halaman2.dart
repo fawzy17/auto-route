@@ -1,15 +1,15 @@
-import 'package:auto_route/annotations.dart';
+
 import 'package:autoroute/route/router.gr.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 import 'package:auto_route/auto_route.dart';
 
+// ignore: camel_case_types, must_be_immutable
 class halamandua extends StatelessWidget {
-  halamandua({Key? key, required this.nama, required this.npm}) : super (key : key);
+  halamandua({Key? key, required this.nama, required this.npm, required this.email}) : super (key : key);
 
-  String? nama, npm;
+  String? nama, npm, email;
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,19 @@ class halamandua extends StatelessWidget {
           children: [
             Text('Nama: $nama'),
             Text('Npm: $npm'),
+            Text('Email: $email'),
             ElevatedButton(
-              child: Text('goto halaman 3'),
+              child: const Text('Goto halaman 3'),
               onPressed: () {
-                context.pushRoute(Routetiga());
+                context.pushRoute(const Routetiga());
               },
-            )
+            ),
+            ElevatedButton(
+              child: const Text('Back'),
+              onPressed: () {
+                context.pushRoute(Routesatu());
+              },
+            ),
           ],
         ),
       ),

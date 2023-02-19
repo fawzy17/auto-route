@@ -40,6 +40,7 @@ class AppRouter extends _i4.RootStackRouter {
           key: args.key,
           nama: args.nama,
           npm: args.npm,
+          email: args.email,
         ),
       );
     },
@@ -99,6 +100,7 @@ class Routedua extends _i4.PageRouteInfo<RouteduaArgs> {
     _i5.Key? key,
     required String? nama,
     required String? npm,
+    required String? email,
   }) : super(
           Routedua.name,
           path: '/satu',
@@ -106,6 +108,7 @@ class Routedua extends _i4.PageRouteInfo<RouteduaArgs> {
             key: key,
             nama: nama,
             npm: npm,
+            email: email,
           ),
         );
 
@@ -117,6 +120,7 @@ class RouteduaArgs {
     this.key,
     required this.nama,
     required this.npm,
+    required this.email,
   });
 
   final _i5.Key? key;
@@ -125,9 +129,11 @@ class RouteduaArgs {
 
   final String? npm;
 
+  final String? email;
+
   @override
   String toString() {
-    return 'RouteduaArgs{key: $key, nama: $nama, npm: $npm}';
+    return 'RouteduaArgs{key: $key, nama: $nama, npm: $npm, email: $email}';
   }
 }
 
